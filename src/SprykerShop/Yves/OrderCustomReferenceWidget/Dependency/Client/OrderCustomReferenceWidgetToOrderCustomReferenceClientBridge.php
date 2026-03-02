@@ -25,12 +25,6 @@ class OrderCustomReferenceWidgetToOrderCustomReferenceClientBridge implements Or
         $this->orderCustomReferenceClient = $orderCustomReferenceClient;
     }
 
-    /**
-     * @param string $orderCustomReference
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function setOrderCustomReference(string $orderCustomReference, QuoteTransfer $quoteTransfer): QuoteResponseTransfer
     {
         return $this->orderCustomReferenceClient->setOrderCustomReference($orderCustomReference, $quoteTransfer);

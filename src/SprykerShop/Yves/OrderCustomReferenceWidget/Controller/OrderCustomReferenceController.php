@@ -16,11 +16,6 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class OrderCustomReferenceController extends AbstractOrderCustomReferenceController
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     public function saveAction(Request $request): RedirectResponse
     {
         $redirectResponse = $this->executeSaveAction($request);
@@ -28,11 +23,6 @@ class OrderCustomReferenceController extends AbstractOrderCustomReferenceControl
         return $redirectResponse;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function executeSaveAction(Request $request): RedirectResponse
     {
         $orderCustomReferenceForm = $this->getFactory()

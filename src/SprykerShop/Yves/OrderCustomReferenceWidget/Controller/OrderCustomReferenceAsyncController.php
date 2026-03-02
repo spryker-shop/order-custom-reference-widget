@@ -36,11 +36,6 @@ class OrderCustomReferenceAsyncController extends AbstractOrderCustomReferenceCo
      */
     protected const KEY_CONTENT = 'content';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function saveAction(Request $request): JsonResponse
     {
         $orderCustomReferenceForm = $this->getFactory()
@@ -81,9 +76,6 @@ class OrderCustomReferenceAsyncController extends AbstractOrderCustomReferenceCo
         ]);
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     protected function getMessagesJsonResponse(): JsonResponse
     {
         return $this->jsonResponse([

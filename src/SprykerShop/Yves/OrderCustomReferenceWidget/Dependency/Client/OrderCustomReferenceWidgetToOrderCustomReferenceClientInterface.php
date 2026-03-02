@@ -12,11 +12,5 @@ use Generated\Shared\Transfer\QuoteTransfer;
 
 interface OrderCustomReferenceWidgetToOrderCustomReferenceClientInterface
 {
-    /**
-     * @param string $orderCustomReference
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function setOrderCustomReference(string $orderCustomReference, QuoteTransfer $quoteTransfer): QuoteResponseTransfer;
 }

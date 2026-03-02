@@ -17,11 +17,6 @@ abstract class AbstractOrderCustomReferenceController extends AbstractController
      */
     protected const GLOSSARY_KEY_ORDER_CUSTOM_REFERENCE_SAVED = 'order_custom_reference.reference_saved';
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteResponseTransfer $quoteResponseTransfer
-     *
-     * @return void
-     */
     protected function handleQuoteResponseTransferErrors(QuoteResponseTransfer $quoteResponseTransfer): void
     {
         foreach ($quoteResponseTransfer->getErrors() as $quoteErrorTransfer) {

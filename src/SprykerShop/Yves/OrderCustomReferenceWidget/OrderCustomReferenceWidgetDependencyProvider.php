@@ -24,11 +24,6 @@ class OrderCustomReferenceWidgetDependencyProvider extends AbstractBundleDepende
      */
     public const CLIENT_QUOTE = 'CLIENT_QUOTE';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -38,11 +33,6 @@ class OrderCustomReferenceWidgetDependencyProvider extends AbstractBundleDepende
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addOrderCustomReferenceClient(Container $container): Container
     {
         $container->set(static::CLIENT_ORDER_CUSTOM_REFERENCE, function (Container $container) {
@@ -54,11 +44,6 @@ class OrderCustomReferenceWidgetDependencyProvider extends AbstractBundleDepende
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addQuoteClient(Container $container): Container
     {
         $container->set(static::CLIENT_QUOTE, function (Container $container) {

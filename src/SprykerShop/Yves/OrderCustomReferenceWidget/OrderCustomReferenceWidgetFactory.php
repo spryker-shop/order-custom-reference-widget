@@ -17,17 +17,11 @@ use Symfony\Component\Form\FormInterface;
 
 class OrderCustomReferenceWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\OrderCustomReferenceWidget\Dependency\Client\OrderCustomReferenceWidgetToOrderCustomReferenceClientInterface
-     */
     public function getOrderCustomReferenceClient(): OrderCustomReferenceWidgetToOrderCustomReferenceClientInterface
     {
         return $this->getProvidedDependency(OrderCustomReferenceWidgetDependencyProvider::CLIENT_ORDER_CUSTOM_REFERENCE);
     }
 
-    /**
-     * @return \SprykerShop\Yves\OrderCustomReferenceWidget\Dependency\Client\OrderCustomReferenceWidgetToQuoteClientInterface
-     */
     public function getQuoteClient(): OrderCustomReferenceWidgetToQuoteClientInterface
     {
         return $this->getProvidedDependency(OrderCustomReferenceWidgetDependencyProvider::CLIENT_QUOTE);
@@ -43,9 +37,6 @@ class OrderCustomReferenceWidgetFactory extends AbstractFactory
         return $this->getFormFactory()->create(OrderCustomReferenceForm::class, $data);
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormFactoryInterface
-     */
     public function getFormFactory(): FormFactoryInterface
     {
         return $this->getProvidedDependency(ApplicationConstants::FORM_FACTORY);
